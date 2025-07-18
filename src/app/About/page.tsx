@@ -8,15 +8,13 @@ import Team from "@/components/sections/services";
 import Footer from "@/components/layout/footer";
 import BackgroundManager from "@/components/backgrounds/background-manager";
 
-export const page = () => {
+const Page = () => {
   return (
     <div>
       <BackgroundManager />
       <CustomCursor />
       <Header />
-      <main
-        className="relative py-20 px-6 md:px-8" // changed from h-screen
-      >
+      <main className="relative py-20 px-6 md:px-8">
         <About />
         <Works />
         <Process />
@@ -27,4 +25,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Page;

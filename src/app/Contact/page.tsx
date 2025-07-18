@@ -5,7 +5,7 @@ import Contact from "@/components/sections/contact";
 import Footer from "@/components/layout/footer";
 import BackgroundManager from "@/components/backgrounds/background-manager";
 
-export const page = () => {
+const page = () => {
   return (
     <div>
       <BackgroundManager />
