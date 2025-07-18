@@ -9,6 +9,7 @@ import {
   Playfair_Display_SC,
 } from "next/font/google";
 import ClientLayout from "@/components/ui/ClientLayout";
+import { Analytics } from "@vercel/analytics/react"; // ← Use /react, not /next
 
 const playfairSC = Playfair_Display_SC({
   subsets: ["latin"],
