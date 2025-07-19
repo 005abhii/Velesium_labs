@@ -44,7 +44,7 @@ export default function AnimatedBackground({
 
     // Initialize particles based on intensity
     const particleCount =
-      intensity === "low" ? 50 : intensity === "medium" ? 100 : 150;
+      intensity === "low" ? 50 : intensity === "medium" ? 150 : 200;
     const particles: Particle[] = [];
 
     for (let i = 0; i < particleCount; i++) {

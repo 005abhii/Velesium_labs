@@ -55,10 +55,11 @@ const Page = () => {
           DevOps, and beyond.
         </motion.p>
         <br />
+        <br />
       </section>
 
       {/* Services Grid */}
-      <section className="grid md:grid-cols-3 font-poppins gap-10 px-6 md:px-20 pb-20">
+      <section className="grid md:grid-cols-3 font-poppins gap-20 px-6 md:px-20 ">
         {services.map((item, idx) => (
           <motion.div
             key={idx}

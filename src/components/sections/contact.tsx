@@ -116,9 +116,21 @@ export default function Contact() {
           <div>
             <h2
               ref={titleRef}
-              className="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight"
+              className="text-4xl md:text-6xl font-extrabold uppercase leading-tight"
             >
-              LET'S WORK TOGETHER
+              LET'S
+            </h2>
+            <h2
+              ref={titleRef}
+              className="text-4xl md:text-6xl font-extrabold uppercase leading-tight"
+            >
+              WORK
+            </h2>
+            <h2
+              ref={titleRef}
+              className="text-4xl md:text-6xl font-extrabold uppercase leading-tight"
+            >
+              TOGETHER
             </h2>
             <div className="w-24 h-1 bg-green-500 mb-8"></div>
             <p className="text-base md:text-lg text-gray-300 mb-8">

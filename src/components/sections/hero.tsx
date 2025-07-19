@@ -94,7 +94,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative h-screen flex items-center justify-center px-6  "
+      className="relative h-[85vh] flex items-center justify-center px-6"
     >
       {/* Vanta background */}
       {/* <div ref={vantaRef} className="absolute inset-0 z-0" /> */}

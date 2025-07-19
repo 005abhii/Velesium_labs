@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import PageTransition from "./PageTransition";
+import { Home } from "lucide-react";
 
 export default function Header() {
   const router = useRouter();
@@ -73,22 +74,78 @@ export default function Header() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex font-inter items-center space-x-9">
-            {[
-              { href: "/About", label: "About Us" },
-              { href: "/Works", label: "Our Works" },
-              { href: "/Blogs", label: "Blogs" },
-              { href: "/Contact", label: "Contact" },
-              { href: "/Academy", label: "Velesium Academy" },
-            ].map((link) => (
+            <>
+              {/* Our Team */}
               <button
-                key={link.href}
-                onClick={() => navigate(link.href)}
+                onClick={() => navigate("/Team")}
                 className="text-lg font-light hover:text-green-400 transition-colors duration-300 relative group"
               >
-                {link.label}
+                Our Team
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
               </button>
-            ))}
+
+              {/* Our Works with Dropdown */}
+              <div className="relative group">
+                <button className="text-lg font-light hover:text-green-400 transition-colors duration-300 relative">
+                  Our Works
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
+                </button>
+
+                {/* Dropdown */}
+                <div
+                  className="absolute left-0 mt-1 flex flex-col min-w-[200px] opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto
+               transition-opacity duration-300 z-50 bg-transparent"
+                >
+                  <button
+                    onClick={() => navigate("/Solutions")}
+                    className="text-left px-4 py-2 hover:text-green-400 text-white bg-transparent"
+                  >
+                    Our Solutions
+                  </button>
+                  <button
+                    onClick={() => navigate("/Products")}
+                    className="text-left px-4 py-2 hover:text-green-400 text-white bg-transparent"
+                  >
+                    Our Products
+                  </button>
+                  <button
+                    onClick={() => navigate("/Blogs")}
+                    className="text-left px-4 py-2 hover:text-green-400 text-white bg-transparent"
+                  >
+                    Blogs
+                  </button>
+                </div>
+              </div>
+
+              {/* Other links */}
+              <button
+                onClick={() => navigate("/Academy")}
+                className="text-lg font-light hover:text-green-400 transition-colors duration-300 relative group"
+              >
+                Velesium Academy
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
+              </button>
+
+              <button
+                onClick={() => navigate("/Contact")}
+                className="text-lg font-light hover:text-green-400 transition-colors duration-300 relative group"
+              >
+                Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
+              </button>
+              {pathname !== "/" && (
+                <button
+                  onClick={() => navigate("/")}
+                  className="relative group  hover:text-green-300 transition-colors duration-300"
+                  title="Go to Home"
+                >
+                  <span className="relative flex items-center justify-center w-6 h-6">
+                    <Home className="w-5 h-5" />
+                    <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-green-400 group-hover:w-full transition-all duration-300"></span>
+                  </span>
+                </button>
+              )}
+            </>
           </div>
         </nav>
       </header>

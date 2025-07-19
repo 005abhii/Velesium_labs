@@ -60,14 +60,19 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <div>Velesium Labs</div>
+              <span>Velesium </span>
+              <span
+                className={`text-7xl text-outline tracking-wide uppercase ${fonts[fontIndex]}`}
+              >
+                Labs
+              </span>
               <div>
-                IS LOADING RIGHT{" "}
-                <span
+                Assembling Pixels and Possibilities…{" "}
+                {/* <span
                   className={`text-7xl text-outline tracking-wide uppercase ${fonts[fontIndex]}`}
                 >
                   NOW
-                </span>
+                </span> */}
               </div>
             </motion.div>
 
