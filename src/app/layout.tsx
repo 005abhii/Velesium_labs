@@ -9,8 +9,7 @@ import {
   Playfair_Display_SC,
 } from "next/font/google";
 import ClientLayout from "@/components/ui/ClientLayout";
-import { Analytics } from "@vercel/analytics/react"; // ← Use /react, not /next
-
+import { Analytics } from "@vercel/analytics/next";
 const playfairSC = Playfair_Display_SC({
   subsets: ["latin"],
   weight: "400",
@@ -51,7 +50,10 @@ export default function RootLayout({
       <body
         className={`${playfairSC.variable} ${inter.variable} ${dmSans.variable} ${playfair.variable} ${jakarta.variable} ${poppins.variable} cursor-none`}
       >
-        <ClientLayout>{children}</ClientLayout>
+        <ClientLayout>
+          {children}
+          <Analytics />
+        </ClientLayout>
       </body>
     </html>
   );
